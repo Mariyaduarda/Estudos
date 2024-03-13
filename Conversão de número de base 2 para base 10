@@ -1,0 +1,28 @@
+
+//Conversão de binário para decimal em linguagem C usando while/for
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int decimal = 0, binario = 0, i = 0, numero = 0;
+    
+    printf("Declare o número binário: \n");
+    scanf("%d", &binario);
+    
+    //loop de CDU e retirada do ult numero
+    for(i=0;binario!= 0; i++) //while(binario != 0) {
+        
+        numero = binario % 10; 
+        
+        binario /= 10;
+        
+        decimal += numero * pow(2, i);
+        
+        i++;
+    }
+    
+        printf(" %d", decimal);
+    
+    return 0;
+}
