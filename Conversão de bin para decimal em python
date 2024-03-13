@@ -1,0 +1,9 @@
+FEITO PELO ANDRÉ DE TOLEDO
+
+input = int(input("binario:"))
+def decimal(x):
+ output = 0
+ for i in range(len(str(x))):
+  output = output + int(str(x)[i])*(2**(len(str(x))-i-1))
+ return output
+print(decimal(input))
